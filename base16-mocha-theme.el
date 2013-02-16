@@ -1,5 +1,3 @@
-
-
 ;; Base16 Mocha (https://github.com/chriskempson/base16)
 ;; Scheme: Chris Kempson (http://chriskempson.com)
 
@@ -83,5 +81,10 @@
      [unspecified ,background ,red ,green ,yellow ,blue ,purple ,blue ,foreground])))
 
 (provide-theme 'base16-mocha)
+
+;;;###autoload
+(when (and load-in-progress (boundp 'custom-theme-load-path))
+      (add-to-list 'custom-theme-load-path
+                   (file-name-as-directory (file-name-directory load-file-name))))
 
 ;;; base16-mocha-theme.el ends here

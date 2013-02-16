@@ -1,5 +1,3 @@
-
-
 ;; Base16 Railscasts (https://github.com/chriskempson/base16)
 ;; Scheme: Ryan Bates (http://railscasts.com)
 
@@ -83,5 +81,10 @@
      [unspecified ,background ,red ,green ,yellow ,blue ,purple ,blue ,foreground])))
 
 (provide-theme 'base16-railscasts)
+
+;;;###autoload
+(when (and load-in-progress (boundp 'custom-theme-load-path))
+      (add-to-list 'custom-theme-load-path
+                   (file-name-as-directory (file-name-directory load-file-name))))
 
 ;;; base16-railscasts-theme.el ends here
